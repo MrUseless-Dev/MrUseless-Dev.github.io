@@ -1,10 +1,283 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Lion Kornsteiner</title>
-</head>
-<body>
-	<h1>Das ist meíne neue Webseite</h1>
+<html lang="de">
 
+<head>
+	<meta charset="UTF-8">
+	<title>HTML und CSS Basics</title>
+	<link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body style="background-image: url(media/backgroundImg3.jpg)">
+	<h1>HTML und CSS Basics</h1>
+	<h2>HTML File Struktur</h2>
+	<h3>&lt;!DOCTYPE html&gt;</h3>
+	<p>
+		Der Dokumententyp (DOCTYPE) gibt an ob es sich zum Beispiel um eine HTML-, XHTML, XML, MathML oder SVG-Datei
+		handelt.
+		&lt;!DOCTYPE html&gt; legt die Document Type Definition (DTD) des Dokuments fest. Durch die DTD wird die
+		Grammatik und Syntax der HTML-Sprache festgelegt.
+	</p>
+	<h3>&lt;head&gt;...&lt;/head&gt;</h3>
+	<p>
+		Unter dem HTML head befinden sich Metadaten (title, meta und base), die verschiedene Informationen zur Seite
+		liefern,
+		wie zum Beispiel Beziehungen zu anderen Dateien (style, link, script). Was im head-Tag steht, wird nicht auf der
+		Webseite angezeigt.
+		Ausgenommen davon ist der &lt;title&gt;, welcher im oberen Fensterrahmen des Browsers angezeigt wird.
+	</p>
+	<h3>&lt;body&gt;...&lt;/body&gt;</h3>
+	<p>
+		Im body befindet sich der gesamte visuelle Inhalt der Webseite.
+	</p>
+	<h3>HTML-Syntax</h3>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Das ist ein Titel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!--STYLE YOUR SITE--&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+		</pre>
+	</div>
+
+
+	<h2>HTML und CSS verlinken</h2>
+	<p>
+		Für die graphische Gestaltung der HTML Seite wird ein CSS File (stylesheet) verwendet.
+		Dadurch gibt es eine strikte Trennung zwischen Inhalt und Aussehen der Webseite.
+		Das Stylesheet beschreibt wie die verschiedenen Elemente (Farbe, Schriftart, Größe) einer Webseite ausschauen.
+	</p>
+	<h3>HTML-Syntax</h3>
+	<div class="syntax">
+
+		<pre>
+			<code>
+&lt;link rel="stylesheet" href="&lt;filename&gt;"&gt;
+			</code>
+		</pre>
+	</div>
+
+
+	<h2>Überschriften</h2>
+	<p>
+		Überschriften in HTML sind durch ihr &lt;hx&gt; Tag erkennbar, wobei das x für eine Zahl von 1 bis 6 steht.
+		Durch die Zahlen können sehr einfach unter Überschriften erzeugt werden.
+	</p>
+	<h3>HTML-Syntax</h3>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;h1&gt;Das ist eine Überschrift 1&lt;/h1&gt;
+&lt;h2&gt;Das ist eine Überschrift 2&lt;/h2&gt;
+			</code>
+		</pre>
+	</div>
+	<h3>Output</h3>
+	<div class="output">
+		<h1>Das ist eine Überschrift 1</h1>
+		<h2>Das ist eine Überschrift 2</h2>
+	</div>
+
+
+	<h2>Paragrafen</h2>
+	<p>
+		Paragrafen machen genau das was man sich denkt, sie unterteilen die Texte der HTML Seiten in einzelne
+		Paragrafen.
+		Ein Paragrafen startet immer in einer neuen Zeile und wird von Browsern automatisch durch ein New Line getrennt.
+	</p>
+	<div class="syntax">
+		<h3>HTML-Syntax</h3>
+		<pre>
+			<code>
+&lt;p&gt;Das ist ein Paragraph&lt;/p&gt;
+&lt;p&gt;Hier ist noch ein Paragraph&lt;/p&gt;
+			</code>
+		</pre>
+	</div>
+	<h3>Output</h3>
+	<div class="output">
+		<p>Das ist ein Paragraph</p>
+		<p>Hier ist noch ein Paragraph</p>
+	</div>
+
+
+	<h2>Bilder einbinden</h2>
+	<p>
+		Auch Bilder können auf Webseiten eingebunden werden.
+	</p>
+	<h3>HTML-Syntax</h3>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;img src="&lt;filename&gt;" alt="&lt;Alternative Text&gt;"/&gt;
+			</code>
+		</pre>
+	</div>
+	<h3>Output</h3>
+	<div class="output_img">
+		<img id="image" src="media/img.jpg" alt="Bild von HTML Code" />
+	</div>
+
+
+	<h2>Links zu anderen Websites</h2>
+	<p>
+		Links zu anderen Seiten der eigenen Homepage bzw. externe Links können auf einer Webseite eingebunden werden.
+		Das Attribut target="_blank" dient dabei dazu einen neuen Tab zu öffnen.
+	</p>
+	<h3>Bild als Link</h3>
+	<h4>HTML-Syntax</h4>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;a href="&lt;reference Link&gt;" target="_blank"&gt;&lt;img src="&lt;filename&gt;" alt="&lt;Alternative Text&gt;"/&gt;&lt;/a&gt;
+			</code>
+		</pre>
+	</div>
+	<h4>Output</h4>
+	<div class="output_without_Border">
+		<a href="https://quickdraw.withgoogle.com/" target="_blank"><img id="clickImage" src="media/click-img.png"
+				alt="Bild von HTML Code" /></a>
+	</div>
+	<h3>Link zu externer Seite</h3>
+	<h4>HTML-Syntax</h4>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;a href="https://pixabay.com/de/" target="_blank"&gt;pixabay&lt;/a&gt;
+			</code>
+		</pre>
+	</div>
+	<h4>Output</h4>
+	<div class="output">
+		<a href="https://pixabay.com/de/" target="_blank">pixabay</a>
+		<p>(Alle Bilder dieser Webseite stammen von pixabay)</p>
+	</div>
+
+
+	<h2>Listen</h2>
+	<p>
+		Listen können sowohl mit Punkten (unordert List) als auch mit Nummerierung (orderet List) dargestellt werden.
+	</p>
+	<h3>HTML-Syntax</h3>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;ul&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+			</code>
+		</pre>
+	</div>
+	<h3>Output</h3>
+	<div class="output">
+		<p>Liste aller verwendeten HTML Elementen</p>
+		<ul>
+			<li>&lt;h1&gt;...&lt;/h1&gt;</li>
+			<li>&lt;h2&gt;...&lt;/h2&gt;</li>
+			<li>&lt;h3&gt;...&lt;/h3&gt;</li>
+			<li>&lt;p&gt;...&lt;/p&gt;</li>
+			<li>&lt;a&gt;...&lt;/a&gt;</li>
+			<li>&lt;img&gt;</li>
+			<li>&lt;div&gt;...&lt;/div&gt;</li>
+			<li>&lt;pre&gt;...&lt;/pre&gt;</li>
+			<li>&lt;code&gt;...&lt;/code&gt;</li>
+			<li>&lt;ol&gt;
+				<ol>
+					<li>&lt;li&gt;...&lt;/li&gt;</li>
+					<li>&lt;li&gt;...&lt;/li&gt;</li>
+					<li>&lt;li&gt;...&lt;/li&gt;</li>
+				</ol>
+				&lt;/ol&gt;
+			</li>
+			<li>&lt;audio&gt;...&lt;/audio&gt;</li>
+			<li>&lt;video&gt;...&lt;/video&gt;</li>
+		</ul>
+	</div>
+
+
+	<h2>Datein wie zum Beispiel Audio oder Video einbinde</h2>
+	<p>
+		Auch Audio, Dateien und Videos können auf einer Webseite verwendet werden.
+	</p>
+	<h3>Audio</h3>
+	<h4>HTML-Syntax</h4>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;audio 
+	controls
+	src="&lt;filename&gt;" 
+&gt;
+	&lt;Alternative Text&gt;
+&lt;/audio&gt;
+			</code>
+		</pre>
+	</div>
+	<h4>Output</h4>
+	<div class="output_without_Border">
+		<p>
+			Music: <a href="https://www.youtube.com/watch?v=qw6ylrPd05M">Time To Talk & Avaya Ft. RYVM - Found You [NCS
+				Release]</a>
+		</p>
+		<audio id="audio_with_controls" controls src="media/Time To Talk  Avaya Ft. RYVM - Found You [NCS Release].mp3">
+			Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
+		</audio>
+	</div>
+
+	<h3>Video</h3>
+	<h4>HTML-Syntax</h4>
+	<div class="syntax">
+		<pre>
+			<code>
+&lt;video 
+	controls
+	src="&lt;filename&gt;" 
+&gt;
+	&lt;Alternative Text&gt;
+&lt;/video&gt;
+			</code>
+		</pre>
+	</div>
+	<h4>Output</h4>
+	<div class="output_without_Border">
+		<video src="media/video.mp4" controls>
+			Ihr Browser kann dieses Video nicht wiedergeben.<br />
+		</video>
+	</div>
+
+
+	<h2>Files</h2>
+	<p>
+		See the HTML/CSS Files of this Site
+	</p>
+	<a href="html.html">HTML File<br></a>
+	<a href="css.html">CSS File</a>
+
+	<!--
+		┼┼┼┼┼┼┼▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄┼┼┼┼┼┼
+		┼┼┼┼┼┼┼█▒▒░░░░░░░░░▒▒█┼┼┼┼┼┼
+		┼┼┼┼┼┼┼┼█░░█░░░░░█░░█┼┼┼┼┼┼┼
+		┼┼┼┼─▄▄──█░░░▀█▀░░░█──▄▄─┼┼┼
+		┼┼┼┼█░░█─▀▄░░░░░░░▄▀─█░░█┼┼┼
+		┼██░██░████░██░░░██░░░█████┼
+		┼██▄██░██▄▄░██░░░██░░░██░██┼
+		┼██▀██░██▀▀░██░░░██░░░██░██┼
+		┼██░██░████░████░████░█████┼	
+		-->
 </body>
+
 </html>
